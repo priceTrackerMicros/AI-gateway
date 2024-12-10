@@ -2,11 +2,11 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "feature/test" ]
+    branches: [ "main" ]
 
 jobs:
-  build: # The job name
-    name: Create and push image # A human-readable job name
+  build:
+    name: Create and push image
     runs-on: ubuntu-latest
 
     steps:
@@ -24,4 +24,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: scaredste/alert-tracker:latest
+          tags: scaredste/ai-gateway:latest
